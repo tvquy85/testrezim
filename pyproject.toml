@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aaai27-stock-regime-mixer"
+version = "0.1.0"
+description = "Leakage-safe regime-conditioned MLP mixers for reproducible stock forecasting experiments."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "pyyaml>=6.0",
+  "scipy>=1.10",
+  "scikit-learn>=1.2",
+  "matplotlib>=3.7",
+  "tqdm>=4.65",
+  "torch>=2.1",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

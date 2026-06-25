@@ -1,0 +1,35 @@
+# Virtual environments
+venv/
+.venv/
+env/
+.env
+
+# Cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Data and outputs
+data/*
+!data/.gitkeep
+outputs/*
+!outputs/.gitkeep
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# Agent directories
+.claude/
+.gemini/
+.agents/
+
+# Logs
+*.log

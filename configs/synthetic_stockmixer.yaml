@@ -1,0 +1,39 @@
+seed: 2027
+device: auto
+output_dir: outputs/synthetic_stockmixer
+
+data:
+  path: data/synthetic_market.npz
+  format: npz
+  lookback: 16
+  horizon: 1
+  close_index: 0
+  feature_scaler: train_standard
+  batch_size: 8
+
+context:
+  enabled: false
+
+model:
+  name: stockmixer
+  hidden_dim: 64
+  dropout: 0.10
+
+loss:
+  mse_weight: 1.0
+  bpr_weight: 0.10
+  ic_weight: 0.05
+  topk: 10
+  max_pairs: 4096
+
+optim:
+  lr: 0.001
+  weight_decay: 0.0001
+  epochs: 20
+  patience: 5
+  grad_clip: 1.0
+
+eval:
+  topk: 10
+  trading_days: 252
+  transaction_cost_bps: [0, 5, 10]

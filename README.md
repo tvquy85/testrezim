@@ -1,8 +1,8 @@
-# AAAI27 Stock Regime Mixer
+# Stock Forecasting Framework
 
-Leakage-safe research framework for **causal regime-conditioned MLP stock forecasting**. The main model is `crc_lora`, a low-rank stock-axis adapter conditioned on causal market context.
+A research framework for stock market forecasting and time series analysis.
 
-Start here:
+## Quick Start
 
 ```bash
 pip install -e .
